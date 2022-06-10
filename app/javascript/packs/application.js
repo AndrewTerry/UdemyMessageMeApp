@@ -12,6 +12,6 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-// Semantic UI
 import '@doabit/semantic-ui-sass'
-import '@doabit/semantic-ui-sass/src/scss/semantic-ui.scss'
+
+$(document).on("turbolinks:load", () => $(".ui.dropdown").dropdown());
