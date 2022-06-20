@@ -13,8 +13,8 @@
         </div>
       </div>
       <div class="extra content">
-        <%= form_with(scope: :message, url: message_path, 
-            html: { class: "ui reply", role: "form"} ) do |form| %>
+        <%= form_with(scope: @message, url: message_path, local: false, 
+            html: { class: "ui reply form", role: "form"} ) do |form| %>
           <div class="field">
             <div class="ui fluid icon input">
               <%= form.text_field :body, placeholder: "Enter a message" %>
