@@ -8,12 +8,12 @@
   <div class="ui twelve wide column">
     <div class="ui fluid raised card chatbox">
       <div class="content">
-        <div class="ui feed">
+        <div class="ui feed" id="chatstream">
           <%= render @messages %>
         </div>
       </div>
       <div class="extra content">
-        <%= form_with(scope: @message, url: message_path, local: false, 
+        <%= form_with(scope: @message, url: message_path, local: false,
             html: { class: "ui reply form", role: "form"} ) do |form| %>
           <div class="field">
             <div class="ui fluid icon input">

@@ -12,7 +12,8 @@ consumer.subscriptions.create("ChatroomChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
-    alert("received");
-    console.log(data);
+    // console.log(data.content);
+    console.log(data.content);
+    $('#chatstream').append(data.content);
   }
 });
