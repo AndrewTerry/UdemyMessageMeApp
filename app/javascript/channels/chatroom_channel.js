@@ -15,5 +15,6 @@ consumer.subscriptions.create("ChatroomChannel", {
     // console.log(data.content);
     console.log(data.content);
     $('#chatstream').append(data.content);
+    scroll_bottom();
   }
 });
