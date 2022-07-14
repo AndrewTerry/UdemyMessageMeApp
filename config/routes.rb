@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
+  
   # resources :message, only: [:new, :create]
   post 'message', to: 'messages#create'
   mount ActionCable.server, at: '/cable'

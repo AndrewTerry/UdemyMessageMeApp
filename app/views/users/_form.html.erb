@@ -1,0 +1,18 @@
+<div class="ui container center aligned">
+  <div class="ui placeholder segment">
+
+        <%= form_with(model: @user, class:"ui large equal width form", local: true) do |f| %>
+          <div class="fields">
+            <div class="field">
+              <%= f.label :username %>
+              <%= f.text_field :username, placeholder:"Choose a Username" %>
+            </div>
+            <div class="field">
+              <%= f.label :password %>
+              <%= f.password_field :password, placeholder:"Enter a password" %>
+            </div>
+          </div>
+          <button class="ui orange submit button" type="submit">Submit</button>
+        <% end %>
+   </div>       
+</div>
